@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 217 86% 34%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 217 86% 94%;
+    --secondary-foreground: 217 86% 34%;
+    --muted: 217 86% 94%;
+    --muted-foreground: 217 86% 34%;
+    --accent: 217 86% 94%;
+    --accent-foreground: 217 86% 34%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 86% 90%;
+    --input: 217 86% 90%;
+    --ring: 217 86% 34%;
+    --radius: 1rem;
+  }
+}
+
+@layer components {
+  .auth-tab-content {
+    @apply animate-in slide-in-from-right-2 duration-500;
+  }
+
+  .auth-input {
+    @apply transition-all duration-300 focus:scale-[1.02] focus:shadow-lg;
+  }
+
+  .auth-button {
+    @apply transform transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
